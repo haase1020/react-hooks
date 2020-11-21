@@ -16,8 +16,8 @@ function Child() {
     console.log('%c    Child: useEffect(() => {})', 'color: LightCoral')
     return () => {
       console.log(
-        '%c    Child: useEffect(() => {}) cleanup 🧹',
-        'color: LightCoral',
+        '%i    Child: useEffect(() => {}) cleanup by Mandi 🧹',
+        'color: blue',
       )
     }
   })

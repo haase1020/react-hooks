@@ -10,7 +10,7 @@ function Greeting({initialName = ''}) {
   )
 
   React.useEffect(() => {
-    window.localStorage.setItem('name', name)
+    window.localStorage.removeItem('name', name)
   })
 
   function handleChange(event) {

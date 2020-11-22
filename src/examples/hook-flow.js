@@ -5,18 +5,20 @@
 import React from 'react'
 
 function Child() {
-  console.log('%c    Child: render start', 'color: MediumSpringGreen')
+  console.log('%c Child: render start', 'color: MediumSpringGreen')
 
   const [count, setCount] = React.useState(() => {
-    console.log('%c    Child: useState(() => 0)', 'color: tomato')
+   
+    console.log('%c hello world 😉', 'color: darkgreen')
+   
     return 0
   })
 
   React.useEffect(() => {
-    console.log('%c    Child: useEffect(() => {})', 'color: LightCoral')
+    console.log('%c Child: useEffect(() => {})', 'color: LightCoral')
     return () => {
       console.log(
-        '%i    Child: useEffect(() => {}) cleanup by Mandi 🧹',
+        '%i Child: useEffect(() => {}) cleanup by Mandi 🧹',
         'color: blue',
       )
     }
@@ -24,22 +26,22 @@ function Child() {
 
   React.useEffect(() => {
     console.log(
-      '%c    Child: useEffect(() => {}, [])',
+      '%c Child: useEffect(() => {}, [])',
       'color: MediumTurquoise',
     )
     return () => {
       console.log(
-        '%c    Child: useEffect(() => {}, []) cleanup 🧹',
+        '%c Child: useEffect(() => {}, []) cleanup 🧹',
         'color: MediumTurquoise',
       )
     }
   }, [])
 
   React.useEffect(() => {
-    console.log('%c    Child: useEffect(() => {}, [count])', 'color: HotPink')
+    console.log('%c Child: useEffect(() => {}, [count])', 'color: HotPink')
     return () => {
       console.log(
-        '%c    Child: useEffect(() => {}, [count]) cleanup 🧹',
+        '%c Child: useEffect(() => {}, [count]) cleanup 🧹',
         'color: HotPink',
       )
     }
@@ -51,41 +53,41 @@ function Child() {
     </button>
   )
 
-  console.log('%c    Child: render end', 'color: MediumSpringGreen')
+  console.log('%c Child: render end', 'color: MediumSpringGreen')
 
   return element
 }
 
 function App() {
-  console.log('%cApp: render start', 'color: MediumSpringGreen')
+  console.log('%c App: render start', 'color: MediumSpringGreen')
 
   const [showChild, setShowChild] = React.useState(() => {
-    console.log('%cApp: useState(() => false)', 'color: tomato')
+    console.log('%c App: useState(() => false)', 'color: tomato')
     return false
   })
 
   React.useEffect(() => {
-    console.log('%cApp: useEffect(() => {})', 'color: LightCoral')
+    console.log('%c App: useEffect(() => {})', 'color: LightCoral')
     return () => {
-      console.log('%cApp: useEffect(() => {}) cleanup 🧹', 'color: LightCoral')
+      console.log('%c App: useEffect(() => {}) cleanup 🧹', 'color: LightCoral')
     }
   })
 
   React.useEffect(() => {
-    console.log('%cApp: useEffect(() => {}, [])', 'color: MediumTurquoise')
+    console.log('%c App: useEffect(() => {}, [])', 'color: MediumTurquoise')
     return () => {
       console.log(
-        '%cApp: useEffect(() => {}, []) cleanup 🧹',
+        '%c App: useEffect(() => {}, []) cleanup 🧹',
         'color: MediumTurquoise',
       )
     }
   }, [])
 
   React.useEffect(() => {
-    console.log('%cApp: useEffect(() => {}, [showChild])', 'color: HotPink')
+    console.log('%c App: useEffect(() => {}, [showChild])', 'color: HotPink')
     return () => {
       console.log(
-        '%cApp: useEffect(() => {}, [showChild]) cleanup 🧹',
+        '%c App: useEffect(() => {}, [showChild]) cleanup 🧹',
         'color: HotPink',
       )
     }
@@ -115,7 +117,7 @@ function App() {
     </>
   )
 
-  console.log('%cApp: render end', 'color: MediumSpringGreen')
+  console.log('%c App: render end', 'color: MediumSpringGreen')
 
   return element
 }
